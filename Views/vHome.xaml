@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="glasluisaTS3B.Views.vHome"
+             Title="Sistema de Calificaciones">
+    <VerticalStackLayout Spacing="10" Padding="10">
+        <Label Text="Sistema de Calificaciones"
+               FontSize="20"
+               HorizontalOptions="Center" />
+
+        <Label Text="Nombre Estudiante:"/>
+        <Picker x:Name="pkEstudiantes">
+            <Picker.Items>
+                <x:String>Bustilos Dannes</x:String>
+                <x:String>Coveña Carlos</x:String>
+                <x:String>Lasluisa Ginna</x:String>
+                <x:String>Noroña Lucia</x:String>
+                <x:String>Molina David</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Label Text="Nota Seguimiento 1:"/>
+        <Entry x:Name="txtNotaSeg1"
+               Placeholder="Ingrese la nota de seguimiento"
+               Keyboard="Numeric"
+               TextChanged="ControlRango"/>
+
+        <Label Text="Examen 1:"/>
+        <Entry x:Name="txtExamen1"
+               Placeholder="Ingrese la nota del examen"
+               Keyboard="Numeric"
+               TextChanged="ControlRango"/>
+
+        <Label Text="Nota Parcial 1:" x:Name="lblNotaParcial1"/>
+
+        <Label Text="Nota Seguimiento 2:"/>
+        <Entry x:Name="txtNotaSeg2"
+               Placeholder="Ingrese la nota de seguimiento"
+               Keyboard="Numeric"
+               TextChanged="ControlRango"/>
+
+        <Label Text="Examen 2:"/>
+        <Entry x:Name="txtExamen2"
+               Placeholder="Ingrese la nota del examen"
+               Keyboard="Numeric"
+               TextChanged="ControlRango"/>
+
+        <Label Text="Nota Parcial 2:" x:Name="lblNotaParcial2"/>
+
+        <Label Text="Fecha:"/>
+        <DatePicker x:Name="dpkFecha" />
+
+        <Button Text="Calcular Notas" Clicked="btnCalcular_Clicked"/>
+
+        <Label Text="Nota Final:" x:Name="lblNotaFinal"/>
+        <Label Text="Estado:" x:Name="lblEstado"/>
+    </VerticalStackLayout>
+</ContentPage>
